@@ -1,1 +1,0 @@
-# ikkiwp09.github.io
