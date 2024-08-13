@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Itim';
-    src: url('/src/font/Itim.ttf');
+    src: url('/src/fonts/Itim.ttf');
 }
 body {
     font-family: 'Itim', sans-serif;
