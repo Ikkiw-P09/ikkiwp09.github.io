@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .bingo-board {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            gap: 10px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        
+        .bingo-cell {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .bingo-cell.selected {
+            background-color: #d0f0c0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bingo Game</h1>
+    <div id="bingo-board" class="bingo-board"></div>
+    <button id="generate-card">Generate New Card</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const board = document.getElementById('bingo-board');
+            const button = document.getElementById('generate-card');
+            
+            // Define the cyber symbols
+            const symbols = [
+                '💻', // Laptop
+                '🖥️', // Desktop computer
+                '🖨️', // Printer
+                '📱', // Smartphone
+                '🧑‍💻', // Technologist
+                '🔒', // Lock
+                '🔑', // Key
+                '💾', // Floppy disk
+                '📡', // Satellite antenna
+                '🌐', // Globe with meridians
+                '⌨️', // Keyboard
+                '🖱️', // Mouse
+                '🖲️', // Trackball
+                '💻', // Laptop
+                '🕵️‍♂️', // Detective
+                '🛡️', // Shield
+                '🔧', // Wrench
+                '🔍', // Magnifying glass
+                '🛠️', // Hammer and wrench
+                '⚙️', // Gear
+                '🧩', // Puzzle piece
+                '📊', // Bar chart
+                '📈', // Chart with upward trend
+                '🎛️', // Control knobs
+                '🎚️', // Level slider
+                '📉', // Chart with downward trend
+                '🧪', // Test tube
+                '⚡', // High voltage sign
+                '🔋', // Battery
+                '🔌', // Electric plug
+                '💡', // Light bulb
+                '🔍', // Magnifying glass
+                '🌌'  // Milky way
+            ];
+
+            const generateCard = () => {
+                board.innerHTML = ''; // Clear previous card
+                const selectedSymbols = shuffle(symbols).slice(0, 25); // Pick 25 random symbols
+                
+                for (let i = 0; i < 25; i++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'bingo-cell';
+                    cell.textContent = selectedSymbols[i];
+                    cell.addEventListener('click', () => {
+                        cell.classList.toggle('selected');
+                    });
+                    board.appendChild(cell);
+                }
+            };
+            
+            // Shuffle function
+            const shuffle = (array) => {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            };
+            
+            // Initial card generation
+            generateCard();
+            
+            // Generate new card on button click
+            button.addEventListener('click', generateCard);
+        });
+    </script>
+</body>
+</html>
