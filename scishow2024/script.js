@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const generateCard = () => {
         board.innerHTML = ''; // Clear previous card
-        const selectedSymbols = shuffle(symbols).slice(0, 25); // Pick 25 random symbols
+        const selectedSymbols = shuffle(symbols).slice(0, 16); // Pick 25 random symbols
         
         for (let i = 0; i < 25; i++) {
             const cell = document.createElement('div');
