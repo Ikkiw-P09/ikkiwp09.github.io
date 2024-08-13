@@ -3,7 +3,7 @@
     src: url('/src/font/Itim.ttf');
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Itim', sans-serif;
     text-align: center;
     margin: 20px;
 }
