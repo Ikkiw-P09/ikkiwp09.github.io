@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Itim-Regular';
-    src: url('/src/fonts/Itim.ttf');
+    font-family: 'Itim';
+    src: url(/src/fonts/Itim.ttf);
 }
 body {
-    font-family: 'Itim-Regular', sans-serif;
+    font-family: 'Itim', sans-serif;
     text-align: center;
     margin: 20px;
 }
