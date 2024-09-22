@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Itim;
+    src: url(/src/fonts/Itim.ttf);
+}
+body {  
+    background-image: url("/src/bg/city-sunset-aesthetic.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Itim', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: white;
+}
+.login-container {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 25);
+}
+.login-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+.login-container input {
+    font-family: 'Itim';
+    width: 95%;
+    padding: 8px;
+    padding-right: 8px;
+    margin-bottom: 10px;
+    border: 1px transparent;
+    border-radius: 5px;   
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.login-container button {
+    font-family: 'Itim', sans-serif;
+    width: 100%;
+    /* padding: 10px; */
+    border: none;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 26px;
+}
+.login-container .error {
+    color: red;
+    margin-bottom: 10px;
+}
