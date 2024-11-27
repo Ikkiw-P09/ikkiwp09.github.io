@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link rel="stylesheet" href="/src/css/shop.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Shop</h1>
+        <div class="auth">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div>
+        <div class="cart">
+            <span>Cart</span> (<span id="cart-count">0</span>)
+        </div>
+    </header>
+    <main>
+        <div class="auth-forms" id="auth-forms">
+            <div class="form-container" id="login-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </div>
+            <div class="form-container" id="register-form">
+                <h2>Register</h2>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button onclick="register()">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product" data-id="1" data-price="29.99">
+                <h2>Product 1</h2>
+                <p>Price: $29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-price="49.99">
+                <h2>Product 2</h2>
+                <p>Price: $49.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Shop</p>
+    </footer>
+    <script src="/src/js/shop.js"></script>
+</body>
+</html>
+    

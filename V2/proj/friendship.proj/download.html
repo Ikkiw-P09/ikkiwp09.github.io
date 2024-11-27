@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Client Launcher</title>
+    <style>
+        @font-face {
+            font-family: 'Itim';
+            src: url();
+        }
+        body {
+            font-family: 'Itim';
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            border-radius: 25px; /* Adjust the value to control the roundness */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="title">Select Game Loader and OS</h1>
+    <div>
+        <label for="loader" id="loaderLabel">Select Game Loader:</label>
+        <select id="loader">
+            <option value="fabric">Fabric</option>
+            <option value="forge" disabled>Forge (Coming Soon)</option>
+        </select>
+    </div>
+    <div>
+        <label for="os" id="osLabel">Select OS:</label>
+        <select id="os">
+            <option value="windows">Windows</option>
+            <option value="mac">Mac</option>
+            <option value="linux">Linux</option>
+        </select>
+    </div>
+    <button onclick="downloadFile()">Download</button>
+    <button onclick="changeLanguage()">Change to Thai</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        autoSelectOS();
+    });
+
+    function autoSelectOS() {
+        const osSelect = document.getElementById('os');
+        const platform = navigator.platform.toLowerCase();
+        
+        if (platform.includes('win')) {
+            osSelect.value = 'windows';
+        } else if (platform.includes('mac')) {
+            osSelect.value = 'mac';
+        } else if (platform.includes('linux')) {
+            osSelect.value = 'linux';
+        } else {
+            osSelect.value = 'linux'; // Default to Linux if OS is not detected
+        }
+    }
+
+    function downloadFile() {
+        const loader = document.getElementById('loader').value;
+        const os = document.getElementById('os').value;
+        const fileName = `Freindship.Proj ${loader}-${os}-latest.zip`;
+        
+        const link = document.createElement('a');
+        link.href = `dl/FriendShip.Proj/${fileName}`;  // Update the path to your download location
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function changeLanguage() {
+        const title = document.getElementById('title');
+        const loaderLabel = document.getElementById('loaderLabel');
+        const osLabel = document.getElementById('osLabel');
+
+        if (title.innerText === 'Select Game Loader and OS') {
+            title.innerText = 'ดาวน์โหลดตัวติดตั้งเกม';
+            loaderLabel.innerText = 'เลือกเครื่องมือโหลด:';
+            osLabel.innerText = 'เลือกระบบปฏิบัติการ:';
+            document.querySelector('button[onclick="downloadFile()"]').innerText = 'ดาวน์โหลด';
+            document.querySelector('button[onclick="changeLanguage()"]').innerText = 'เปลี่ยนเป็นภาษาอังกฤษ';
+        } else {
+            title.innerText = 'Select Game Loader and OS';
+            loaderLabel.innerText = 'Select Game Loader:';
+            osLabel.innerText = 'Select OS:';
+            document.querySelector('button[onclick="downloadFile()"]').innerText = 'Download';
+            document.querySelector('button[onclick="changeLanguage()"]').innerText = 'Change to Thai';
+        }
+    }
+</script>
+
+</body>
+</html>
