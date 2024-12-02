@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="736x736" href="/src/img/main-modified.png">
-    <title>About Me - Ikkiw P09</title>
+    <title>Support Me - Ikkiw P09</title>
 </head>
 <body>
     <header>
@@ -15,18 +15,25 @@
         <nav>
             <a href="https://ikkiwp09.com/"> Home</a>
             <a href="/aboutme" >About Me</a>
-            <a href="/proj" class="active">Projects</a>
+            <a href="/proj" >Projects</a>
             <a href="/shop" onclick="event.preventDefault()">Shop </a>
             <a href="/social">Social</a>
-            <a href="/support">Support</a>
+            <a href="/support" class="active">Support</a>
         </nav>
     </header>
     <section class="home">
-        <div class="proj-content">
-            <div class="proj">
-                <h3>My Projects</h3>
-                v
+        <a href="https://tipme.in.th/ikkiwp09" class="btn">TipMe</a>
+        <a href="#" class="btn" id="myBtn">Promptpay</a>
+
+        <div id="promptpaypopup">  <!-- Added popup div -->
+            <div id="promptpaypopup-content">
+                <p>This is a Promptpay Popup!  Put your Promptpay QR code or information here.</p>
+                <img src="/src/img/promptpay.jpeg">
+                <a href="#" id="closeBtn">Close</a>
             </div>
-        </div>
-        
-    </section>
+        </div>  <!-- End of popup div -->
+
+    </section> 
+    <script src="script.js"></script>
+</body>
+</html>

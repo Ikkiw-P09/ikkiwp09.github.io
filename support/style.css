@@ -1,0 +1,39 @@
+section.home #promptpaypopup {
+    display: none;
+    position: fixed;
+    z-index: 10; /* Increased z-index to ensure it's on top */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the promptpaypopup */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Reduced padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Added shadow */
+}
+
+section.home #promptpaypopup-content {
+    max-width: 300px; /* Set a maximum width */
+    text-align: center; /* Center text */
+}
+
+section.home #promptpaypopup img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;     /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+section.home #promptpaypopup-content p {
+  margin-bottom: 10px;
+}
+
+section.home #closeBtn {
+    display: block; /* Make the close button a block element for better styling */
+    margin: 10px auto 0; /* Center the button */
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from the link */
+    color: #333;
+}
