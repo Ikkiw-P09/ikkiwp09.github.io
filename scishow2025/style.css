@@ -25,11 +25,10 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    width: 90%; /* width relative to the screen*/
-    max-width: 500px; /* set a maximum width */
+    width: 90%;
+    max-width: 500px;
     margin-bottom: 20px;
 }
-
 
 .bingo-cell {
     text-align: center;
@@ -51,7 +50,9 @@ body {
 }
 
 .bingo-cell.selected {
-    background-color: #74efff;
+    background-color: #74efff; /* A lighter blue color */
+    border: 2px solid #00bfff; /* a slightly darker border */
+     transition: border-color 0.2s ease-in-out; /* an animation */
 }
 
 button {
