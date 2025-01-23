@@ -1,0 +1,100 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f7, #d1c4e9);
+    color: #444;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background: #ffccf2;
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #d81b60;
+}
+.navbar a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    color: #6a1b9a;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #d81b60;
+}
+
+/* Sections */
+.section {
+    padding: 4em 1em;
+}
+.section h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ba68c8;
+}
+.section p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+.about .chibi-image {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 1em;
+}
+.gallery-container img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+.streams .button {
+    padding: 0.8em 2em;
+    background: #d81b60;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+.streams .button:hover {
+    background: #ba68c8;
+}
+.contact .social-icons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #d81b60;
+    color: #d81b60;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s, color 0.3s;
+}
+.contact .social-icons a:hover {
+    background: #d81b60;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: #ffccf2;
+    padding: 1em;
+    color: #6a1b9a;
+    font-size: 0.9em;
+}
