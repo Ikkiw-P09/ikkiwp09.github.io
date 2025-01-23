@@ -1,16 +1,19 @@
-@font-face {
-    font-family: 'Itim';
-    src: url("/src/fonts/Itim.ttf");
-}
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Custom Font */
+@font-face {
+    font-family: 'Itim';
+    src: url('/src/fonts/Itim.ttf') format('truetype');
+}
+
 /* Minimal CSS */
 body {
-    font-family: 'Itim';
+    font-family: 'Itim', sans-serif; /* Use Itim, fallback to sans-serif */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,13 +53,13 @@ body {
 }
 
 button {
-    font-family : "Itim";
     padding: 10px 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     background-color: #fff;
     transition: background-color 0.2s ease-in-out;
+  font-family: 'Itim', sans-serif;/* Apply Itim, fallback to sans-serif */
 }
 
 button:hover {
@@ -79,9 +82,13 @@ button:hover {
     justify-content: center;
      z-index: 100;
 }
+
 #win-popup h2 {
      margin-bottom: 10px;
+       font-family: 'Itim', sans-serif;
 }
+
 #win-popup button {
-  margin: 5px; /* add space between buttons*/
+  margin: 5px;
+    font-family: 'Itim', sans-serif;
 }
