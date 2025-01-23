@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Itim';
+    src: url("/src/fonts/Itim.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Minimal CSS */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.bingo-cell {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bingo-cell img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    display: block;
+}
+
+.bingo-cell.selected {
+    background-color: #e0f7fa;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Popup styling */
+#win-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     z-index: 100;
+}
+#win-popup h2 {
+     margin-bottom: 10px;
+}
+#win-popup button {
+  margin: 5px; /* add space between buttons*/
+}
