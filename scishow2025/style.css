@@ -11,104 +11,130 @@
     src: url('/src/fonts/Itim.ttf') format('truetype');
 }
 
-/* Minimal, Cute, Aesthetic CSS */
+/* Cute CSS */
 body {
     font-family: 'Itim', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px; /* More padding for a cleaner look */
-    background-color: #f8f8f8; /* Soft background */
-    color: #4a4a4a; /* Darker text color */
+    padding: 30px;
+    background-color: #ffebee; /* Soft pink background */
+    color: #5e35b1; /*  Deep purple text */
 }
 
 #bingo-board {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px; /* Slightly larger gap */
+    gap: 12px;
     width: 90%;
-    max-width: 480px; /* Slightly smaller board */
-    margin-bottom: 25px; /* More space below the board */
+    max-width: 480px;
+    margin-bottom: 25px;
 }
 
 .bingo-cell {
     text-align: center;
     cursor: pointer;
-    border: 1px solid #e0e0e0; /* Very light border */
-    border-radius: 12px; /* More rounded corners */
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Transition all properties */
+    border: none; /* No border for a softer look */
+    border-radius: 15px; /* Even more rounded corners */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out; /* Added transform transition */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: #fff; /* White background for cells*/
+    background-color: #fff0f5; /*  Very light pink cells */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Slightly more pronounced shadow */
 }
 
+.bingo-cell:hover {
+    transform: scale(1.03); /* Gentle scale up on hover */
+}
+
+.bingo-cell:active {
+    transform: scale(0.98); /* Gentle scale down on click */
+}
+
+
 .bingo-cell img {
-    max-width: 85%;
-    max-height: 85%; /* Images slightly smaller */
+    max-width: 75%; /* Images a bit smaller again */
+    max-height: 75%;
     object-fit: contain;
     display: block;
 }
 
 .bingo-cell.selected {
-    background-color: #f0e6ef; /* Soft lavender */
-     border: 1px solid #d5c8d4; /* subtle selection border */
+    background-color: #ffcdd2; /* Soft pastel red for selected */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow on selected */
 }
 
 
 button {
-    padding: 12px 24px;
-    border: none; /* No border on buttons */
-     border-radius: 25px;
+    padding: 14px 28px; /* slightly larger buttons */
+    border: none;
+    border-radius: 30px; /* More rounded buttons */
     cursor: pointer;
-     background-color: #fff; /* white button background */
-    transition: background-color 0.2s ease-in-out;
+    background-color: #fce4ec; /* Light pink button background */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out; /* Added transform transition */
     font-family: 'Itim', sans-serif;
-     color: #4a4a4a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05)  /* Soft shadow */
+    color: #5e35b1; /* Deep purple button text */
+    font-size: 1.1em; /* Slightly larger font size on buttons */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Slightly more pronounced button shadow */
 }
 
 button:hover {
-    background-color: #f0f0f0;
+    background-color: #f8bbd0; /* A bit darker pink on hover */
+    transform: scale(1.05); /* Gentle scale up on button hover */
 }
+
+button:active {
+    transform: scale(0.95); /* Gentle scale down on button click */
+}
+
 
 /* Popup styling */
 #win-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff; /* white popup background*/
-  padding: 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 15px; /* Rounded popup corners */
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft Shadow */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fffaf0; /* Ivory popup background */
+    padding: 35px; /* More padding for popup */
+    border: none; /* No popup border */
+    border-radius: 20px; /* Very rounded popup corners */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced popup shadow */
 }
 
 #win-popup h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* More space below title */
     font-family: 'Itim', sans-serif;
-     color: #4a4a4a;
+    color: #e91e63; /* Brighter pink for "WIN!" title */
+    font-size: 2em; /* Larger title font size */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for title */
 }
 
 #win-popup button {
     margin: 10px;
     font-family: 'Itim', sans-serif;
-    padding: 10px 20px; /* consistent button padding*/
+    padding: 12px 24px; /* Consistent button padding */
     border: none;
-    border-radius: 25px; /* rounded button corners*/
+    border-radius: 30px; /* Rounded button corners */
     cursor: pointer;
-    background-color: #f8f8f8; /* Soft button background */
-    transition: background-color 0.2s ease-in-out;
-    color: #4a4a4a; /* consistent button text colour */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05)  /* Soft shadow */
+    background-color: #fce4ec; /* Light pink button background */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out; /* Added transform transition */
+    color: #5e35b1; /* Deep purple button text */
+    font-size: 1em; /* Button font size */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
 }
- #win-popup button:hover {
-  background-color: #f0f0f0;
+
+#win-popup button:hover {
+    background-color: #f8bbd0; /* Hover color */
+    transform: scale(1.05); /* Gentle scale up on popup button hover */
+}
+
+#win-popup button:active {
+    transform: scale(0.95); /* Gentle scale down on popup button click */
 }
