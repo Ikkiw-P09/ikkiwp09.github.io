@@ -13,7 +13,7 @@
 
 /* Minimal CSS */
 body {
-    font-family: 'Itim', sans-serif; /* Use Itim, fallback to sans-serif */
+    font-family: 'Itim'; /* Use Itim, fallback to sans-serif */
     display: flex;
     flex-direction: column;
     align-items: center;
