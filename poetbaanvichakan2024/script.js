@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const programIcons = [
       'images/Word.svg', 'images/Excel.svg', 'images/PowerPoint.svg', 'images/Adobe_Photoshop.svg',
       'images/Adobe_Illustrator.svg', 'images/Adobe_Premiere_Pro.svg', 'images/Audacity.png', 'images/Blender.svg',
-      'images/Visual_Studio_Code.svg', 'images/FileZilla.svg', 'images/WinRAR.png', 'images/VLC.svg',
-      'images/Discord.svg', 'images/Steam.svg', 'images/OBS_Studio.svg', 'images/OneNote.svg',
+      'images/Visual_Studio_Code.svg', 'images/FileZilla.svg', 'images/WinRAR.png', 'images/VLC.svg', 'images/Steam.svg', 'images/OBS_Studio.svg', 'images/OneNote.svg',
       'images/Google_Chrome.svg', 'images/Firefox.svg', 'images/Spotify.svg', 'images/Netflix.svg',
       'images/Notepad++.svg', 'images/7ziplogo.svg', 'images/Gimp.svg', 'images/Inkscape.svg',
       'images/Krita.svg', 'images/DaVinci_Resolve_Studio.png', 'images/Unity_2021.svg', 'images/Unreal_Engine.svg',
