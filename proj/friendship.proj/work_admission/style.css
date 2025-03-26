@@ -1,0 +1,51 @@
+body {
+    font-family: 'Sriracha';
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.work_admission {
+    font-family: 'Sriracha';
+    padding: 20px;
+}
+
+.work_admission .home-content {
+    margin: 100px 0px 100px 0px;
+}
+
+.work_admission ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.work_admission .home-content h1 {
+    font-family: 'Sriracha';
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center; /* จัดกึ่งกลาง */
+}
+
+.work_admission div h2 {
+    font-family: 'Sriracha';
+    font-size: 36px;
+}
+
+.work_admission li {
+    font-family: 'Sriracha';
+    font-size: 20px; /* ปรับขนาดอิโมจิ */
+    margin-bottom: 5px;
+}
+
+/*  เพิ่มสี  */
+.designer h2 { color: #ff69b4; }
+.prompter h2 { color: #00bfff; }
