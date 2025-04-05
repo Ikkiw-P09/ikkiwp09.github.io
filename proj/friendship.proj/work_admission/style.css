@@ -1,8 +1,9 @@
 body {
     font-family: 'Sriracha';
-    margin: 0;
-    padding: 0;
-    color: #333;
+    color: #ffffff;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 header {
@@ -48,4 +49,4 @@ header {
 
 /*  เพิ่มสี  */
 .designer h2 { color: #ff69b4; }
-.prompter h2 { color: #00bfff; }
+.scriptwriter h2 { color: #00bfff; }
