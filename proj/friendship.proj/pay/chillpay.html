@@ -3,16 +3,24 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Payment - Chillpay</title>
+<title>Payment Demo</title>
 </head>
 <body>
-    <form id="payment-form" action="https://sandbox-cdnv3.chillpay.co/B1065RNWVN/" method="post" role="form" class="form-horizontal">
-        <modernpay:widget id="modernpay-widget-container" 
-        data-merchantid="M036476" data-orderno="friendshipwhitelist" data-customerid="123456" data-clientip=ipaddr data-routeno="1" data-currency="764" 
-         data-apikey="p2ADibB7Ammjya3zHrK8jbqNZVB4lvxFA42iCQMnXwtk8EkNxza1Y7qxN8M9qOBQ">
-        </modernpay:widget>
-        <button type="submit" id="btnSubmit" value="Submit" class="btn">Payment</button>
-    </form>
-    <script async src="https://sandbox-cdnv3.chillpay.co/js/widgets.js?v=1.00" charset="utf-8"></script>
+<form id="payment-form" action="https://sandbox-cdnv3.chillpay.co/Payment/" method="post" role="form" class="form-horizontal">
+<modernpay:widget id="modernpay-widget-container" 
+    data-merchantid="M036476" 
+    data-orderno="test123456"
+    data-customerid="123456test"
+    data-amount="3900"
+    data-currency="764"
+    data-routeno="1"
+    data-clientip=ip-display
+    data-apikey="p2ADibB7Ammjya3zHrK8jbqNZVB4lvxFA42iCQMnXwtk8EkNxza1Y7qxN8M9qOBQ">
+</modernpay:widget>
+<button type="submit" id="btnSubmit" value="Submit" class="btn">Payment</button>
+</form>
+<p> IP Addr : <span id="ip-display"></span></p>
+<script async src="https://sandbox-cdnv3.chillpay.co/js/widgets.js?v=1.00" charset="utf-8"></script>
+<script src="srcipt.js"></script> 
 </body>
 </html>

@@ -6,3 +6,10 @@
 .aboutme-content h4{
     font-size: 2rem;
 }
+
+.aboutme-content
+
+.faqbtn {
+    display: flex;
+    justify-content: center;
+  }

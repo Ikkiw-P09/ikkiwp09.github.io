@@ -1,0 +1,12 @@
+.faq h3 {
+  font-size: 50px;
+}
+
+.faq h4 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.faq h4 a {
+    color: #a91b0d;
+}
