@@ -1,0 +1,132 @@
+body {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.head2-friendshipproj {
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .par2about {
+    text-align: left;
+  }
+  
+  .discordbtn {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+  }
+  
+  .discordbtn:hover {
+    transform: scale(1.1);
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  /**Config Dev Card**/
+  .devcard {
+    margin-top: 3rem;
+    position : relative;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+    padding : 30px;  
+  }
+  
+  .devcard .card {
+    position: relative;
+    max-width : 300px;
+    height : 250px;  
+    background-color : #000000;
+    margin : 30px 10px;
+    padding : 20px 15px;  
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+    border: #fff solid 2px;;
+  }
+  .devcard .card:hover {
+    height : 440px;    
+  }
+  
+  
+  .devcard .card .image {
+    position : relative;
+    width : 260px;
+    height : 260px;
+    top : -40%;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+    left: 1.4%;
+  }
+  
+  .devcard .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .devcard .card .content {
+    position : relative;
+    top : -160px;
+    padding : 10px 15px;
+    color : #fff;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+    font-size: 26px;
+    bottom: 100px;
+    padding: 10px 15px;
+    margin-top: auto; /* Push content to the bottom */
+  }
+  
+  .devcard .card:hover .content {
+     margin-top : 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  }
+
+/**Config Heading**/
+.proj-content h1{
+  margin-top: 18rem;
+  justify-content: center;
+  gap: 8rem;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.proj-content h2{
+  margin-top: 10rem;
+  justify-content: center;
+  gap: 8rem;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.proj-content h3{
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.proj-content h4{
+  font-size: 4rem;
+  text-align: center;
+}
+.proj-content p{
+  font-size: 3rem;
+  text-align: center;
+}

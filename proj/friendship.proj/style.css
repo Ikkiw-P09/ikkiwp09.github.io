@@ -1,131 +1,109 @@
+/* Custom styles and font for the project */
 body {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+    font-family: 'Poppins', 'Kanit', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    overflow-x: hidden;
+    background-image: url('https://images.unsplash.com/photo-1549880194-d50d03251c6c?q=80&w=2670&auto=format&fit=crop');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* เคอร์เซอร์จะแสดงตามปกติ */
 }
-.head2-friendshipproj {
-    text-align: center;
-    font-size: 28px;
-  }
-  
-  .par2about {
-    text-align: left;
-  }
-  
-  .discordbtn {
-    display: flex;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    padding-left: 0;
-    padding-right: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    align-items: center;
-  }
-  
-  .discordbtn:hover {
-    transform: scale(1.1);
-    padding-left: 0;
-    padding-right: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  
-  /**Config Dev Card**/
-  .devcard {
-    margin-top: 3rem;
-    position : relative;
-    display : flex;
-    align-items : center;
-    justify-content : center;
-    flex-wrap : wrap;
-    padding : 30px;  
-  }
-  
-  .devcard .card {
-    position: relative;
-    max-width : 300px;
-    height : 250px;  
-    background-color : #000000;
-    margin : 30px 10px;
-    padding : 20px 15px;  
-    display : flex;
-    flex-direction : column;
-    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
-    transition : 0.3s ease-in-out;
-    border-radius : 15px;
-    border: #fff solid 2px;
-  }
-  .devcard .card:hover {
-    height : 440px;    
-  }
-  
-  
-  .devcard .card .image {
-    position : relative;
-    width : 260px;
-    height : 260px;
-    top : -40%;
-    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
-    z-index : 1;
-  }
-  
-  .devcard .card .image img {
-    max-width : 100%;
-    border-radius : 15px;
-  }
-  
-  .devcard .card .content {
-    position : relative;
-    top : -160px;
-    padding : 10px 15px;
-    color : #fff;
-    text-align : center;
-    visibility : hidden;
-    opacity : 0;
-    transition : 0.3s ease-in-out;
-    font-size: 26px;
-    bottom: 100px;
-    padding: 10px 15px;
-    margin-top: auto; /* Push content to the bottom */
-  }
-  
-  .devcard .card:hover .content {
-     margin-top : 30px;
-     visibility : visible;
-     opacity : 1;
-     transition-delay: 0.2s;
-    
-  }
 
-/**Config Heading**/
-.proj-content h1{
-  margin-top: 18rem;
-  justify-content: center;
-  gap: 8rem;
-  font-size: 5rem;
-  font-weight: 700;
-  text-align: center;
+/* Header/Navigation Bar - ไม่มี Header scroll effect ใน CSS นี้ */
+/* มันจะใช้ Tailwind CSS class ใน HTML (.fixed .top-6 .left-1/2 .-translate-x-1/2 ...) โดยตรง */
+/* จึงไม่จำเป็นต้องมี CSS rule สำหรับ header.scrolled อีกต่อไป */
+
+/* Custom hover effect for Discord button */
+.btn-discord {
+    animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.proj-content h2{
-  margin-top: 10rem;
-  justify-content: center;
-  gap: 8rem;
-  font-size: 5rem;
-  font-weight: 700;
-  text-align: center;
+.btn-discord:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 126, 255, 0.5);
 }
-.proj-content h3{
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-align: center;
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
-.proj-content h4{
-  font-size: 4rem;
-  text-align: center;
+
+/* Custom gradient for card background */
+.dev-card-bg {
+    background-image: linear-gradient(145deg, #161b22, #0d1117);
 }
-.proj-content p{
-  font-size: 3rem;
-  text-align: center;
+
+/* The glowing circle that follows the cursor */
+.cursor-glow {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,126,255,0.2) 0%, rgba(0,126,255,0) 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1; /* ควรอยู่ด้านหลังเนื้อหาหลัก */
+}
+
+/* Animation for developer cards */
+.dev-card-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.dev-card-animation.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for mobile/smaller screens */
+@media (max-width: 768px) {
+    .text-6xl { font-size: 3.5rem; }
+    .text-8xl { font-size: 5rem; }
+    .text-5xl { font-size: 2.5rem; }
+    .text-2xl { font-size: 1.25rem; }
+    .text-lg { font-size: 1rem; }
+    .text-md { font-size: 0.875rem; }
+
+    /* บนมือถือ, Header ควรอยู่ชิดขอบบนและเต็มความกว้างเพื่อประสบการณ์ที่ดี */
+    header {
+        top: 0;
+        width: 100%;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+        background-color: rgba(13, 17, 23, 0.9);
+        backdrop-filter: blur(15px);
+    }
+    header nav {
+        padding: 0.5rem 1rem;
+        border-radius: 0;
+        background-color: transparent;
+        justify-content: center;
+    }
+    header nav ul {
+        display: none; /* Hide navigation links on small screens */
+    }
+    header nav a.text-xl {
+        font-size: 1.5rem;
+    }
+
+    .py-24 {
+        padding-top: 8rem; /* เพิ่ม padding ด้านบนของ main content */
+    }
+
+    /* Hide the cursor glow on touch devices or smaller screens */
+    .cursor-glow {
+        display: none;
+    }
+    body {
+        cursor: default; /* Show default cursor on touch devices */
+    }
 }

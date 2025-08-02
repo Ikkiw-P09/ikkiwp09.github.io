@@ -1,65 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Friendship.Proj</title>
-    <link rel="stylesheet" href="/style.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Poppins and Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Discord icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/src/img/Google_AI_Studio_2025-08-02T16_20_35.258Z-modified (1).png" type="image/x-icon">
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="\src\img\7b436b33-eae8-4966-ad0d-829e0ead2ae1 - Copy-modified.png">
 </head>
+<body class="antialiased">
+    <!-- Cursor glowing effect element -->
+    <div id="cursor-glow" class="cursor-glow"></div>
 
-<body>
-    <header>
-        <a href="https://friendship.ikkiwp09.com/" class="logo">Friendship.Proj</a>
-        <nav>
-            <a href="https://friendship.ikkiwp09.com/" class="active"> Home</a>
-            <a href="work_admission/">Admission</a>
-            <a href="portal/">Portal</a>
+    <!-- Header/Navigation Bar with Liquid Glass effect -->
+    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300">
+        <nav class="p-2 md:p-4 flex flex-nowrap items-center justify-between bg-gray-900/50 backdrop-blur-xl rounded-full shadow-lg">
+            <a href="#" class="text-xl md:text-2xl font-bold text-white transition duration-300 hover:text-blue-400 px-2 md:px-6 whitespace-nowrap">Friendship.Proj</a>
+            <ul class="flex space-x-2 md:space-x-8 text-sm md:text-md font-medium px-2 md:px-6">
+                <li><a href="#" class="text-white transition duration-300 border-b-2 border-blue-500 pb-1 whitespace-nowrap">Home</a></li>
+                <li><a href="#" class="text-gray-400 transition duration-300 hover:text-blue-400 whitespace-nowrap">Portal</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="home">
-        <div class="proj-content">
-            <h1>Friendship.Proj</h1>
-            <h1>About This Project</h1>
-            <p>โปรเจคเซิฟเวอร์ Minecraft แนวโรลเพลย์ในรั้วโรงเรียนเวทย์มนตร์</p>
-            <!--<p>เซิฟเวอร์มายคราฟแนวบทบาทสมมติ โดยอยู่ในโรงเรียน-->
-            <!--<p>โดยบทบาทสมมติให้เล่นตามธรรมชาติได้เลย ไม่บังคับ งดคำไม่สุภาพ</p>-->
-            <p>Version : 1.20.1 (Java)</p>
-            <div class="discordbtn">
-                <a href="https://discord.gg/QZXAZvSJds"><img src="/src/img/join-server.png" width="249.25"
-                        height="59.25"></a>
-            </div>
-            <div class="head2-friendshipproj">
-                <h2>Developers</h2>
-            </div>
-            <div class=devcard>
-                <div class=card>
-                    <div class=image>
-                        <img src="/src/img/0e5625d5420de7a035ab1903584bee74.jpg">
-                    </div>
-                    <div class=content>
-                        <h3>Ikkiw P09</h3>
-                        <p>@ikkiwp09_z <br>Admin & Founder</p>
-                    </div>
-                </div>
-                <div class=card>
-                    <div class=image>
-                        <img src="/src/img/400085980_737445994895034_5919873408852361743_n.jpg">
-                    </div>
-                    <div class=content>
-                        <h3>Phone</h3>
-                        <p>@fx_ne.e <br>Server Manager<br>& Co-Founder</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Content Section -->
+    <main class="py-24">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Project Title and Description -->
+            <section class="mb-24">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-tight mb-8">
+                    Friendship.Proj
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-400 max-w-4xl mx-auto mb-10">
+                    โปรเจคเซิฟเวอร์ Minecraft แนวโรลเพลย์ในรั้วโรงเรียนเวทมนตร์
+                </p>
+                <p class="text-md md:text-lg text-gray-500 mb-12">
+                    Version : 1.20.1 (Java)
+                </p>
+                <!-- Discord Join Button -->
+                <a href="https://discord.gg/QZXAZvSJds" class="inline-flex items-center justify-center space-x-3 px-8 py-4 bg-blue-600 rounded-full text-white font-bold text-lg md:text-xl shadow-lg transition duration-300 ease-in-out transform btn-discord">
+                    <i class="fab fa-discord text-2xl"></i>
+                    <span>เข้าร่วมเซิร์ฟเวอร์</span>
+                </a>
+            </section>
 
+            <!-- Developers Section -->
+            <section id="dev-section">
+                <h2 class="text-5xl font-bold text-white mb-16 mt-24">
+                    Developers
+                </h2>
+                <div class="flex flex-wrap justify-center gap-12">
+                    <!-- Developer Card 1 -->
+                    <div class="dev-card-bg w-72 rounded-3xl p-6 flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl dev-card-animation">
+                        <img src="/src/img/4533cc27d412d5f6ae452e3d938b3f4b - Copy.jpg" alt="Profile of Ikkiw P09" class="w-48 h-48 rounded-full border-4 border-blue-500 object-cover mb-4">
+                        <h3 class="text-3xl font-bold text-white mb-2">Ikkiw P09</h3>
+                        <p class="text-md text-gray-400 mb-1">@ikkiwp09_z</p>
+                        <p class="text-lg text-blue-400 font-semibold">Admin & Founder</p>
+                    </div>
+
+                    <!-- Developer Card 2 -->
+                    <div class="dev-card-bg w-72 rounded-3xl p-6 flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl dev-card-animation">
+                        <img src="/src/img/400085980_737445994895034_5919873408852361743_n.jpg" alt="Profile of Phone" class="w-48 h-48 rounded-full border-4 border-blue-500 object-cover mb-4">
+                        <h3 class="text-3xl font-bold text-white mb-2">Phone</h3>
+                        <p class="text-md text-gray-400 mb-1">@fx_ne.e</p>
+                        <p class="text-lg text-blue-400 font-semibold">Discord Manager<br>& Co-Founder</p>
+                    </div>
+
+                    <!-- Developer Card 3 -->
+                    <div class="dev-card-bg w-72 rounded-3xl p-6 flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl dev-card-animation">
+                        <img src="/src/img/516526012_1270346331389880_2814538765466545040_n.jpg" alt="Profile of Namsing" class="w-48 h-48 rounded-full border-4 border-blue-500 object-cover mb-4">
+                        <h3 class="text-3xl font-bold text-white mb-2">Namsing</h3>
+                        <p class="text-md text-gray-400 mb-1">@namsingcool</p>
+                        <p class="text-lg text-blue-400 font-semibold">Server Manager</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 backdrop-blur-md text-center py-6 mt-16">
+        <p class="text-gray-500 text-sm">© 2025 Friendship.Proj. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
-
-<script src="/src/js/script.js"></script>
-
 </html>

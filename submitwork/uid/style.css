@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #fbeee6 0%, #d7b899 100%);
+    font-family: 'IBM Plex Sans Thai', Arial, sans-serif; /* เปลี่ยนเป็น IBM Plex Sans Thai */
+    color: #6b4f36;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background: #a67c52;
+    color: #fff8f0;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 16px #d7b89955;
+}
+
+h1, h2, h3 {
+    font-family: 'IBM Plex Sans Thai', Arial, sans-serif; /* เปลี่ยนเป็น IBM Plex Sans Thai */
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.uidbox {
+    max-width: 600px;
+    background: #fff8f0;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px #d7b89944;
+    padding: 32px;
+    text-align: center;
+}
+
+button, input[type="submit"] {
+    background: #c69c6d;
+    color: #fff8f0;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-family: 'IBM Plex Sans Thai', Arial, sans-serif; /* เปลี่ยนเป็น IBM Plex Sans Thai */
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px #d7b89933;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #a67c52;
+}
+
+input, textarea, select {
+    border: 2px solid #d7b899;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans Thai', Arial, sans-serif; /* เปลี่ยนเป็น IBM Plex Sans Thai */
+    margin-bottom: 16px;
+    background: #fff;
+    color: #6b4f36;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: 700;
+    color: #a67c52;
+    margin-bottom: 6px;
+    display: block;
+    font-family: 'IBM Plex Sans Thai', Arial, sans-serif; /* เพิ่ม IBM Plex Sans Thai ให้ label ด้วย */
+}
+
+a {
+    color: #a67c52;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: 'IBM Plex Sans Thai', Arial, sans-serif; /* เพิ่ม IBM Plex Sans Thai ให้ link ด้วย */
+}
+
+.coffee-cup {
+    display: block;
+    margin: 24px auto 0 auto;
+    width: 80px;
+    height: 80px;
+    background: url('https://cdn-icons-png.flaticon.com/512/415/415733.png') no-repeat center/contain;
+    opacity: 0.8;
+}

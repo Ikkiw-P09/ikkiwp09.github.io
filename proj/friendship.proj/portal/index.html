@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Portal - Friendship.Proj</title> <!-- เปลี่ยน title เป็น Portal -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Poppins and Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Discord icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/src/img/Google_AI_Studio_2025-08-02T16_20_35.258Z-modified (1).png" type="image/x-icon">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css"> <!-- style.css ควรอยู่ระดับเดียวกันกับ index.html หรือปรับ path ตามโครงสร้างจริง -->
 </head>
-<body>
-    <header>
-        <a href="https://friendship.ikkiwp09.com/" class="logo">Friendship.Proj</a>
-        <nav>
-            <a href="https://friendship.ikkiwp09.com/"> Home</a>
-            <a href="work_admission/">Admission</a>
-            <a href="" class="active">Portal</a>
+<body class="antialiased">
+    <!-- Cursor glowing effect element -->
+    <div id="cursor-glow" class="cursor-glow"></div>
+
+    <!-- Header/Navigation Bar with Liquid Glass effect -->
+    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300">
+        <nav class="p-2 md:p-4 flex flex-nowrap items-center justify-between bg-gray-900/50 backdrop-blur-xl rounded-full shadow-lg">
+            <a href="https://proj.ikkiwp09.com/friendship.proj" class="text-xl md:text-2xl font-bold text-white transition duration-300 hover:text-blue-400 px-2 md:px-6 whitespace-nowrap">Friendship.Proj</a>
+            <ul class="flex space-x-2 md:space-x-8 text-sm md:text-md font-medium px-2 md:px-6">
+                <!-- แก้ไขลิงก์ Home ให้ชี้ไปที่ index.html และ Portal ให้เป็น active -->
+                <li><a href="https://proj.ikkiwp09.com/friendship.proj" class="text-gray-400 transition duration-300 hover:text-blue-400 whitespace-nowrap">Home</a></li>
+                <li><a href="portal/" class="text-white transition duration-300 border-b-2 border-blue-500 pb-1 whitespace-nowrap">Portal</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="home">
-        
-    </div>
+    <!-- Main Content Section -->
+    <main class="py-24 flex flex-col items-center justify-center min-h-[calc(100vh-200px)] text-center">
+        <!-- ปรับแต่งข้อความแจ้งเตือน -->
+        <h1 class="text-5xl md:text-8xl font-extrabold text-white leading-tight mb-4">
+            Coming Soon!
+        </h1>
+        <p class="text-lg md:text-3xl text-gray-400 max-w-3xl mx-auto mb-8">
+            หน้านี้กำลังอยู่ในระหว่างการพัฒนา ขออภัยในความไม่สะดวก
+        </p>
+        <p class="text-sm md:text-2xl text-gray-600">
+            หากคุณไม่ใช่แอดมินหรือสมาชิกในเซิร์ฟเวอร์ กรุณาเข้าร่วมและลงทะเบียนก่อนเข้าถึงหน้านี้
+        </p>
+        <!-- เพิ่มปุ่มกลับหน้าหลัก -->
+        <a href="https://proj.ikkiwp09.com/friendship.proj" class="mt-8 inline-flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 rounded-full text-white font-bold text-md shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700">
+            <i class="fas fa-arrow-left"></i>
+            <span>กลับหน้าหลัก</span>
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 backdrop-blur-md text-center py-6 mt-16">
+        <p class="text-gray-500 text-sm">© 2025 Friendship.Proj. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script> <!-- script.js ควรอยู่ระดับเดียวกันกับ index.html หรือปรับ path ตามโครงสร้างจริง -->
 </body>
 </html>
