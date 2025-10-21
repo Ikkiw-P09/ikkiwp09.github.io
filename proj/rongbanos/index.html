@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rongban OS | ระบบปฏิบัติการเซิร์ฟเวอร์สำหรับโรงพยาบาล</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-bg {
+             background-color: #111827;
+             background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+             background-size: 20px 20px;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .faq-question {
+            cursor: pointer;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Nav -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <svg class="h-8 w-8 text-red-600" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                <h1 class="text-2xl font-bold text-gray-800">Rongban OS</h1>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-red-600 transition font-medium">ฟีเจอร์</a>
+                <a href="#pricing" class="text-gray-600 hover:text-red-600 transition font-medium">ราคา</a>
+                <a href="#why-us" class="text-gray-600 hover:text-red-600 transition font-medium">ทำไมต้องเรา</a>
+                <a href="#faq" class="text-gray-600 hover:text-red-600 transition font-medium">คำถามที่พบบ่อย</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block bg-red-600 text-white font-bold py-2 px-5 rounded-lg hover:bg-red-700 transition">ขอใบเสนอราคา</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-24 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight reveal">ยกระดับความปลอดภัยให้โรงพยาบาล<br>ด้วยระบบปฏิบัติการเซิร์ฟเวอร์ที่แข็งแกร่งที่สุด</h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto reveal">Rongban OS คือระบบปฏิบัติการบนพื้นฐาน Linux ที่ออกแบบมาเพื่อปกป้องข้อมูลคนไข้และระบบของโรงพยาบาลจากการโจมตีทางไซเบอร์โดยเฉพาะ</p>
+                <div class="mt-10 flex justify-center gap-4 reveal">
+                    <a href="#contact" class="bg-red-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition text-lg">ขอเดโม่การใช้งาน</a>
+                    <a href="#features" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-600 transition text-lg">ดูฟีเจอร์ทั้งหมด</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 reveal">โรงพยาบาลของคุณกำลังเสี่ยงอยู่หรือไม่?</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto reveal">เซิร์ฟเวอร์ที่ใช้ระบบปฏิบัติการทั่วไปคือเป้าหมายหลักของการโจมตีทางไซเบอร์</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="reveal">
+                        <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mt-4">เสี่ยงต่อ Ransomware</h3> 
+                        <p class="text-gray-600 mt-2">ข้อมูลคนไข้และข้อมูลสำคัญอาจถูกเข้ารหัส เรียกค่าไถ่ ทำให้การดำเนินงานหยุดชะงัก</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mt-4">ข้อมูลรั่วไหล</h3>
+                        <p class="text-gray-600 mt-2">การป้องกันที่ไม่รัดกุม อาจทำให้ข้อมูลส่วนบุคคลของผู้ป่วยรั่วไหลสู่ภายนอก</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mt-4">ระบบล่ม</h3>
+                        <p class="text-gray-600 mt-2">ความไม่เสถียรและช่องโหว่ อาจนำไปสู่การหยุดทำงานของระบบทั้งหมด</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 reveal">ฟีเจอร์เด่นของ Rongban OS</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto reveal">ออกแบบมาเพื่อความปลอดภัยและเสถียรภาพสูงสุดสำหรับโรงพยาบาล</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 transition duration-300 feature-card reveal">
+                        <h3 class="font-bold text-xl mb-2">ระบบป้องกันเชิงรุก (IDS/IPS)</h3>
+                        <p class="text-gray-600">มี Firewall และระบบตรวจจับ-ป้องกันการบุกรุกในตัว คอยสอดส่องความผิดปกติ 24/7</p>
+                    </div>
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 transition duration-300 feature-card reveal">
+                        <h3 class="font-bold text-xl mb-2">AI ตรวจจับภัยคุกคาม</h3>
+                        <p class="text-gray-600">ใช้ Machine Learning วิเคราะห์พฤติกรรมที่ผิดปกติและแจ้งเตือนก่อนเกิดความเสียหาย (ในรุ่น Pro)</p>
+                    </div>
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 transition duration-300 feature-card reveal">
+                        <h3 class="font-bold text-xl mb-2">เข้ารหัสการสื่อสาร TLS 1.3</h3>
+                        <p class="text-gray-600">บังคับใช้มาตรฐานการเข้ารหัสล่าสุดและปลอดภัยที่สุด สำหรับทุกการเชื่อมต่อเข้าสู่เซิร์ฟเวอร์</p>
+                    </div>
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 transition duration-300 feature-card reveal">
+                        <h3 class="font-bold text-xl mb-2">Zero-Downtime Updates</h3>
+                        <p class="text-gray-600">อัปเดตแพตช์ความปลอดภัยล่าสุดได้อัตโนมัติ โดยไม่จำเป็นต้องรีสตาร์ทหรือปิดเซิร์ฟเวอร์</p>
+                    </div>
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 transition duration-300 feature-card reveal">
+                        <h3 class="font-bold text-xl mb-2">Immutable Logging</h3>
+                        <p class="text-gray-600">บันทึก Log การใช้งานทั้งหมดลงสื่อบันทึกที่แก้ไขไม่ได้ (Write-Once) เพื่อใช้เป็นหลักฐานสำคัญ</p>
+                    </div>
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 transition duration-300 feature-card reveal">
+                        <h3 class="font-bold text-xl mb-2">ระบบสำรองข้อมูลอัตโนมัติ</h3>
+                        <p class="text-gray-600">สำรองข้อมูลสำคัญอย่างสม่ำเสมอ โดยไฟล์สำรองจะถูกเข้ารหัสและเข้าถึงได้ผ่านโหมดกู้คืนเท่านั้น</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 reveal">แพ็กเกจที่เหมาะกับคุณ</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto reveal">เลือกรุ่นที่เหมาะสมกับขนาดและความต้องการของโรงพยาบาล</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Pricing Tier 1 -->
+                    <div class="border border-gray-200 rounded-lg p-8 flex flex-col reveal">
+                        <h3 class="text-2xl font-bold">Essential</h3>
+                        <p class="text-gray-500 mt-2">สำหรับคลินิกและโรงพยาบาลขนาดเล็ก</p>
+                        <div class="text-4xl font-extrabold my-6">ติดต่อสอบถาม</div>
+                        <ul class="space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Rongban OS Core Security</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Firewall & IDS/IPS</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Zero-Downtime Updates</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Remote Support (1 ปี)</li>
+                        </ul>
+                        <a href="#contact" class="mt-8 w-full text-center bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition">เลือกแพ็กเกจ</a>
+                    </div>
+                    <!-- Pricing Tier 2 (Highlighted) -->
+                    <div class="border-2 border-red-600 rounded-lg p-8 flex flex-col relative reveal">
+                        <div class="absolute top-0 -translate-y-1/2 bg-red-600 text-white px-4 py-1 rounded-full font-bold text-sm">ยอดนิยม</div>
+                        <h3 class="text-2xl font-bold">Plus</h3>
+                        <p class="text-gray-500 mt-2">สำหรับโรงพยาบาลขนาดกลาง</p>
+                        <div class="text-4xl font-extrabold my-6">ติดต่อสอบถาม</div>
+                        <ul class="space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>ทุกอย่างใน Essential</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Immutable Logging</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Automated Secure Backup</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Onsite & Remote Support (2 ปี)</li>
+                        </ul>
+                        <a href="#contact" class="mt-8 w-full text-center bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition">เลือกแพ็กเกจ</a>
+                    </div>
+                    <!-- Pricing Tier 3 -->
+                    <div class="border border-gray-200 rounded-lg p-8 flex flex-col reveal">
+                        <h3 class="text-2xl font-bold">Pro</h3>
+                        <p class="text-gray-500 mt-2">สำหรับโรงพยาบาลขนาดใหญ่</p>
+                        <div class="text-4xl font-extrabold my-6">ติดต่อสอบถาม</div>
+                        <ul class="space-y-3 text-gray-600 flex-grow">
+                             <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>ทุกอย่างใน Plus</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>AI Threat Detection</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Advanced Analytics Dashboard</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Onsite & Remote Support (3 ปี)</li>
+                        </ul>
+                        <a href="#contact" class="mt-8 w-full text-center bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 transition">เลือกแพ็กเกจ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Why Us Section / Testimonial -->
+        <section id="why-us" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <img src="https://i.imgur.com/gK9q0aA.png" alt="RongbanOS Product Screenshot" class="mx-auto rounded-lg shadow-2xl max-w-3xl w-full mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold reveal">ออกแบบโดยผู้เชี่ยวชาญ<br>เพื่อความปลอดภัยของสถานพยาบาลโดยเฉพาะ</h2>
+                <p class="mt-6 text-gray-300 max-w-3xl mx-auto reveal">"การเปลี่ยนมาใช้ Rongban OS เป็นการตัดสินใจที่ดีที่สุดด้าน IT ของเรา ระบบทำงานได้เสถียรมากและทีมสนับสนุนก็พร้อมช่วยเหลือเสมอ ทำให้เรามั่นใจว่าข้อมูลคนไข้ปลอดภัย"</p>
+                <p class="mt-4 font-bold reveal">— ผู้จัดการฝ่าย IT, โรงพยาบาลตัวอย่าง</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 reveal">คำถามที่พบบ่อย</h2>
+                </div>
+                <div class="space-y-4 reveal">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="faq-question flex justify-between items-center p-5">
+                            <h3 class="font-semibold text-lg">การย้ายจาก Windows Server มาใช้ Rongban OS ยุ่งยากไหม?</h3>
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p>ทีมงานของเรามีบริการช่วยเหลือในการย้ายระบบ (Migration) เพื่อให้การเปลี่ยนแปลงเป็นไปอย่างราบรื่นและส่งผลกระทบต่อการทำงานน้อยที่สุด โดยเราจะวางแผนร่วมกับทีม IT ของโรงพยาบาลอย่างใกล้ชิด</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="faq-question flex justify-between items-center p-5">
+                            <h3 class="font-semibold text-lg">ซอฟต์แวร์จัดการโรงพยาบาล (HIS) ที่ใช้อยู่จะทำงานบน OS นี้ได้หรือไม่?</h3>
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p>Rongban OS ถูกออกแบบให้รองรับการทำงานร่วมกับซอฟต์แวร์ HIS ส่วนใหญ่ผ่านเทคโนโลยี Virtualization หรือ Containerization กรุณาติดต่อทีมงานเพื่อตรวจสอบความเข้ากันได้ของซอฟต์แวร์ที่ท่านใช้งานอยู่</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="faq-question flex justify-between items-center p-5">
+                            <h3 class="font-semibold text-lg">ต้องใช้ฮาร์ดแวร์สเปคแบบไหน?</h3>
+                            <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p>เรามีฮาร์ดแวร์เซิร์ฟเวอร์รุ่น RPC-01 Pro ที่ปรับแต่งมาเพื่อประสิทธิภาพสูงสุดของ Rongban OS หรือหากท่านมีเซิร์ฟเวอร์อยู่แล้ว ทีมงานของเราสามารถให้คำแนะนำสเปคขั้นต่ำและช่วยเหลือในการติดตั้งได้</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="contact" class="py-20 bg-red-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold reveal">พร้อมยกระดับความปลอดภัยให้โรงพยาบาลของคุณแล้วหรือยัง?</h2>
+                <p class="mt-4 max-w-2xl mx-auto reveal">ติดต่อเราวันนี้เพื่อรับคำปรึกษาฟรี หรือขอสาธิตการทำงานของ Rongban OS</p>
+                <a href="mailto:sales@rongbanos.th" class="mt-8 inline-block bg-white text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition text-lg reveal">ติดต่อฝ่ายขาย</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Rongban OS by customTech Co.</h3>
+                    <p class="text-gray-400">ระบบปฏิบัติการเพื่อความปลอดภัยของโรงพยาบาล</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#features" class="text-gray-300 hover:text-white">ฟีเจอร์</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white">ราคา</a>
+                    <a href="#faq" class="text-gray-300 hover:text-white">คำถามที่พบบ่อย</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white">ติดต่อเรา</a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                &copy; 2025 customTech Co. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for reveal animation on scroll
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 50; // Adjust this value to change when the animation triggers
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on page load
+
+        // JavaScript for FAQ Accordion
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('svg');
+
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    if (ans !== answer) {
+                        ans.style.maxHeight = null;
+                        ans.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current answer
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.classList.remove('rotate-180');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
