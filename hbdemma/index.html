@@ -5,159 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HBD Emma 💖</title>
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;600&display=swap" rel="stylesheet">
-    <style>
-        /* ตั้งค่าพื้นฐาน */
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-            font-family: 'Itim', cursive;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            color: #555;
-        }
-
-        .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 90%;
-            width: 380px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            z-index: 10;
-            animation: popIn 1s ease;
-        }
-
-        /* รูปโปรไฟล์ */
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #ffb6c1;
-            margin-bottom: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            background-color: white; /* ใส่สีพื้นหลังเผื่อรูปไม่โหลด */
-        }
-
-        h1 {
-            color: #ff6b81;
-            margin: 5px 0;
-            font-size: 2em;
-        }
-
-        .age {
-            background-color: #ffb6c1;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-
-        .traits {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .trait-badge {
-            background-color: #fff0f5;
-            border: 1px solid #ffb6c1;
-            padding: 6px 10px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            color: #ff6b81;
-            transition: transform 0.2s;
-        }
-
-        .trait-badge:hover { transform: scale(1.1); cursor: pointer; }
-
-        p.message {
-            font-family: 'Kanit', sans-serif;
-            font-size: 1em;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #ff6b81;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            font-size: 1.1em;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: 'Itim', cursive;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 107, 129, 0.4);
-            margin-bottom: 10px;
-        }
-
-        button:hover { background-color: #ff4757; transform: translateY(-3px); }
-
-        /* ส่วนซ่อนข้อความ */
-        #hiddenMessage {
-            display: none;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 2px dashed #ffb6c1;
-            animation: fadeIn 0.5s;
-        }
-
-        /* รูป QR Code */
-        .qr-code {
-            width: 180px; /* ปรับขนาด QR */
-            height: auto;
-            border-radius: 10px;
-            margin-top: 10px;
-            border: 5px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .qr-text {
-            color: #ff4757;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        /* Animation */
-        @keyframes popIn {
-            0% { transform: scale(0); opacity: 0; }
-            80% { transform: scale(1.05); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Heart BG */
-        .heart-bg {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.6);
-            animation: floatUp linear infinite;
-            z-index: 1;
-            pointer-events: none;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(100vh) scale(0); opacity: 1; }
-            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/src/img/1000006977-modified.png">
 </head>
 <body>
-
     <div class="container">
         <!-- 
            👇 ส่วนรูปโปรไฟล์ 👇
@@ -167,7 +18,7 @@
         
         <h1>Happy Birthday<br>Emma 🎉</h1>
         
-        <div class="age">26 Dec 2025 | 15 Years Old 🎂</div>
+        <div class="age">26 Dec | 15 Years Old 🎂</div>
 
         <div class="traits">
             <span class="trait-badge">🐱 ทาสแมว</span>
@@ -180,69 +31,17 @@
         <p class="message">
             สุขสันต์วันเกิดนะเด็กดื้อ! 💖<br>
             ขอให้มีความสุขมากๆ โตขึ้นอีกปีแล้วนะ 15 ขวบแล้ว<br>
-            รักหนูนะไอ้ต้าวทาสแมว
+            รักเธอนะคับ แมวน้อย 😽💝
         </p>
 
         <button onclick="showLove()">🎁 กดรับของขวัญ 🎁</button>
         
         <div id="hiddenMessage">
             <div class="qr-text">รักเอ็มม่าที่สุดในโลกเลย! 💖</div>
-            <div>เอาค่าขนมไปซื้อแมวเลียนะ 👇</div>
-            
-            <!-- 
-               👇 ส่วนรูป QR Code 👇
-               ต้องมีไฟล์ชื่อ qr.jpg อยู่ในโฟลเดอร์เดียวกับไฟล์นี้ 
-            -->
-            <img src="/src/img/Gift_Envelope_2025-12-22_12.33.25.png" alt="สแกนรับเงิน" class="qr-code">
-            
+            <div>ของขวัญเล็กๆน้อยๆคับ (ถ้าอ้อนให้เพิ่ม!!) 👇</div>
+            <img src="/src/img/Gift_Envelope_2025-12-25_20.30.48.png" alt="สแกนรับเงิน" class="qr-code">
         </div>
     </div>
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart-bg');
-            heart.innerHTML = '❤';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
-            document.body.appendChild(heart);
-            setTimeout(() => { heart.remove(); }, 5000);
-        }
-        setInterval(createHeart, 300);
-
-        function showLove() {
-            const msg = document.getElementById('hiddenMessage');
-            if(msg.style.display === 'block') return;
-            
-            msg.style.display = 'block';
-            setTimeout(() => { msg.scrollIntoView({ behavior: 'smooth', block: 'end' }); }, 100);
-
-            for(let i=0; i<30; i++) { setTimeout(createEmoji, i * 50); }
-        }
-
-        function createEmoji() {
-            const emojis = ['🐱', '💖', '🎂', '🥺', '💰'];
-            const el = document.createElement('div');
-            el.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
-            el.style.position = 'absolute';
-            el.style.left = '50%';
-            el.style.top = '50%';
-            el.style.transform = 'translate(-50%, -50%)';
-            el.style.fontSize = '30px';
-            el.style.transition = 'all 1s ease';
-            el.style.zIndex = '100';
-            document.body.appendChild(el);
-
-            setTimeout(() => {
-                const x = (Math.random() - 0.5) * 500;
-                const y = (Math.random() - 0.5) * 500;
-                el.style.transform = `translate(${x}px, ${y}px)`;
-                el.style.opacity = '0';
-            }, 50);
-
-            setTimeout(() => el.remove(), 1000);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
