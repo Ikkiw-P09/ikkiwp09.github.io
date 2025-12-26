@@ -2,10 +2,10 @@
 
 # 1. ตั้งค่า Path โฟลเดอร์เว็บไซต์ (*** อย่าลืมแก้ตรงนี้เป็น Path ของ Linux ***)
 # ตัวอย่าง: /var/www/html/ikkiwp09.com หรือ /home/user/desktop/ikkiwp09.com
-DIRECTORY="/mnt/binbows/Users/TUF A15/Desktop/ikkiwp09.com"
+DIRECTORY="/home/ikkiwp09_z/Desktop/ikkiwp09.com"
 
 # 2. ข้อความใหม่ที่จะนำไปแทนที่
-NEW_LINK='<link rel="icon" type="image/png" sizes="736x736" href="/src/img/signal-2025-11-21-121500-modified.png">'
+NEW_LINK='<link rel="icon" type="image/png" sizes="736x736" href="/src/img/₍ᐢ_.ᐢ₎ — matching icon-modified.png">'
 
 # ตรวจสอบว่ามีโฟลเดอร์อยู่จริงไหม
 if [ ! -d "$DIRECTORY" ]; then
