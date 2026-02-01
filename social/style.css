@@ -28,3 +28,15 @@ section.home .social-content .social .social-icon- a:hover {
     background-color: #b74b4b;
     box-shadow: 0  0 25px #b74b4b;
 }
+
+@media (max-width: 768px) {
+    .social-content h3 {
+        font-size: 4rem;
+    }
+
+    section.home .social-content .social .social-icon- a {
+        width: 6rem;
+        height: 6rem;
+        font-size: 3rem;
+    }
+}
