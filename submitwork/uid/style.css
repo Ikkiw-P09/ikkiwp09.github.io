@@ -95,3 +95,18 @@ a {
     background: url('https://cdn-icons-png.flaticon.com/512/415/415733.png') no-repeat center/contain;
     opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+    .uidbox {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button, input[type="submit"] {
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
