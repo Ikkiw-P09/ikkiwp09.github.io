@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบความรู้ - กรดมะนาว</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #84cc16;
+            --success: #22c55e;
+            --error: #ef4444;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --selected-border: #ffffff;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .quiz-container {
+            width: 100%;
+            max-width: 700px;
+            padding-bottom: 50px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--primary);
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .question-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-btn {
+            background: #2a2a2a;
+            border: 2px solid #333;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'Prompt', sans-serif;
+            font-size: 1rem;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .option-btn:hover {
+            background: #333;
+        }
+
+        /* State: Selected (User clicks this) */
+        .option-btn.selected {
+            border-color: var(--primary);
+            background-color: rgba(132, 204, 22, 0.1);
+        }
+
+        /* State: Correct (After Submit) */
+        .option-btn.correct {
+            background: rgba(34, 197, 94, 0.2) !important;
+            border-color: var(--success) !important;
+            color: var(--success) !important;
+        }
+
+        /* State: Wrong (After Submit) */
+        .option-btn.wrong {
+            background: rgba(239, 68, 68, 0.2) !important;
+            border-color: var(--error) !important;
+            color: var(--error) !important;
+            opacity: 0.7;
+        }
+
+        .explanation {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(132, 204, 22, 0.1);
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+            display: none; /* Hidden by default */
+            font-size: 0.95rem;
+            color: #d1d5db;
+        }
+
+        .explanation strong {
+            color: var(--primary);
+        }
+
+        .score-board {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 2px solid var(--primary);
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: var(--primary);
+            color: #000;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            background: #fff;
+        }
+
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-btn:hover { color: white; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="header">
+            <h1><i class="fas fa-flask"></i> Quiz Challenge</h1>
+            <p>เลือกคำตอบให้ครบทุกข้อ แล้วกดส่งคำตอบ</p>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="question-card" id="q1">
+            <div class="question-text">1. ข้อใดคือสูตรเคมีของกรดซิตริก (กรดมะนาว)?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectOption(this, 'q1')">A. NaCl</button>
+                <button class="option-btn" onclick="selectOption(this, 'q1')" data-correct="true">B. C₆H₈O₇</button>
+                <button class="option-btn" onclick="selectOption(this, 'q1')">C. H₂SO₄</button>
+                <button class="option-btn" onclick="selectOption(this, 'q1')">D. C₆H₁₂O₆</button>
+            </div>
+            <div class="explanation">
+                <strong>เฉลย:</strong> สูตรเคมีของกรดซิตริกคือ <strong>C₆H₈O₇</strong> ประกอบด้วยคาร์บอน ไฮโดรเจน และออกซิเจน
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="q2">
+            <div class="question-text">2. ในอุตสาหกรรม ใช้เชื้อราชนิดใดในการผลิตกรดซิตริก?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectOption(this, 'q2')" data-correct="true">A. Aspergillus niger</button>
+                <button class="option-btn" onclick="selectOption(this, 'q2')">B. Lactobacillus</button>
+                <button class="option-btn" onclick="selectOption(this, 'q2')">C. Saccharomyces cerevisiae</button>
+                <button class="option-btn" onclick="selectOption(this, 'q2')">D. Penicillium</button>
+            </div>
+            <div class="explanation">
+                <strong>เฉลย:</strong> พระเอกของเรื่องนี้คือเชื้อรา <strong>Aspergillus niger</strong> ที่เปลี่ยนน้ำตาลให้เป็นกรดซิตริก
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="q3">
+            <div class="question-text">3. ข้อใดคือความแตกต่างสำคัญระหว่าง กรดมะนาว กับ วิตามินซี?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectOption(this, 'q3')">A. กรดมะนาวรสหวานกว่า</button>
+                <button class="option-btn" onclick="selectOption(this, 'q3')">B. วิตามินซีทนความร้อนได้ดีกว่า</button>
+                <button class="option-btn" onclick="selectOption(this, 'q3')" data-correct="true">C. กรดมะนาวทนความร้อนได้ดีมาก (วิตามินซีสลายตัวง่าย)</button>
+                <button class="option-btn" onclick="selectOption(this, 'q3')">D. ไม่มีข้อแตกต่าง</button>
+            </div>
+            <div class="explanation">
+                <strong>เฉลย:</strong> กรดมะนาวมีพันธะที่แข็งแรง <strong>ทนความร้อนได้ดี</strong> นำไปต้ม ผัด แกง ทอด รสเปรี้ยวไม่หาย ต่างจากวิตามินซีที่โดนความร้อนแล้วหายหมด
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="q4">
+            <div class="question-text">4. ปฏิกิริยา "Bath Bomb" (สบู่ตีฟอง) เกิดจากกรดมะนาวทำปฏิกิริยากับอะไร?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectOption(this, 'q4')">A. เกลือแกง</button>
+                <button class="option-btn" onclick="selectOption(this, 'q4')" data-correct="true">B. เบกกิ้งโซดา (Sodium Bicarbonate)</button>
+                <button class="option-btn" onclick="selectOption(this, 'q4')">C. น้ำตาลทราย</button>
+                <button class="option-btn" onclick="selectOption(this, 'q4')">D. น้ำส้มสายชู</button>
+            </div>
+            <div class="explanation">
+                <strong>เฉลย:</strong> Bath Bomb เกิดจาก <strong>กรดซิตริก + เบกกิ้งโซดา</strong> เมื่อโดนน้ำจะเกิดก๊าซ CO₂ เป็นฟองฟู่
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="q5">
+            <div class="question-text">5. ความสำคัญทางชีวภาพของกรดซิตริก คือข้อใด?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectOption(this, 'q5')" data-correct="true">A. เป็นสารตัวกลางในวัฏจักรเครบส์ (สร้างพลังงาน)</button>
+                <button class="option-btn" onclick="selectOption(this, 'q5')">B. ใช้ย่อยโปรตีนในกระเพาะอาหาร</button>
+                <button class="option-btn" onclick="selectOption(this, 'q5')">C. ช่วยลำเลียงออกซิเจนในเลือด</button>
+            </div>
+            <div class="explanation">
+                <strong>เฉลย:</strong> กรดซิตริกเป็นสารตัวกลางตัวแรกที่เกิดขึ้นใน <strong>วัฏจักรเครบส์ (Krebs Cycle)</strong> ในไมโทคอนเดรีย เพื่อสร้างพลังงาน ATP
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="submit-btn" id="submitBtn" onclick="submitQuiz()">ส่งคำตอบ & ตรวจผล</button>
+
+        <!-- Score Board -->
+        <div class="score-board" id="scoreBoard">
+            คะแนนของคุณคือ
+            <div style="font-size: 3rem; font-weight: bold; margin: 10px 0;">
+                <span id="scoreCount">0</span> / 5
+            </div>
+            <div id="scoreMessage" style="font-size: 1rem; color: #aaa;"></div>
+        </div>
+
+        <a href="data.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับไปหน้าเนื้อหา</a>
+    </div>
+
+    <script>
+        let quizSubmitted = false;
+
+        function selectOption(btn, questionId) {
+            if (quizSubmitted) return; // ถ้าส่งแล้ว ห้ามแก้
+
+            // หาปุ่มอื่นๆ ในข้อเดียวกัน แล้วเอา class selected ออก
+            const parent = document.getElementById(questionId);
+            const buttons = parent.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.classList.remove('selected'));
+
+            // ใส่ class selected ให้ปุ่มที่เลือก
+            btn.classList.add('selected');
+        }
+
+        function submitQuiz() {
+            if (quizSubmitted) return;
+            
+            let score = 0;
+            const totalQuestions = 5;
+            const questions = document.querySelectorAll('.question-card');
+            
+            // เช็คว่าตอบครบไหม (Option)
+            // ถ้าจะบังคับตอบครบ ให้เปิด comment นี้
+            /*
+            let answered = 0;
+            questions.forEach(q => {
+                if(q.querySelector('.selected')) answered++;
+            });
+            if(answered < totalQuestions) {
+                alert('กรุณาตอบให้ครบทุกข้อก่อนส่งคำตอบครับ');
+                return;
+            }
+            */
+
+            quizSubmitted = true;
+            document.getElementById('submitBtn').style.display = 'none'; // ซ่อนปุ่มส่ง
+
+            questions.forEach(card => {
+                const selectedBtn = card.querySelector('.selected');
+                const correctBtn = card.querySelector('[data-correct="true"]');
+                const explanation = card.querySelector('.explanation');
+
+                // เปิดคำอธิบาย
+                explanation.style.display = 'block';
+
+                if (selectedBtn) {
+                    if (selectedBtn === correctBtn) {
+                        // ตอบถูก
+                        score++;
+                        selectedBtn.classList.add('correct');
+                        selectedBtn.innerHTML += ' <i class="fas fa-check-circle"></i>';
+                    } else {
+                        // ตอบผิด
+                        selectedBtn.classList.add('wrong');
+                        selectedBtn.innerHTML += ' <i class="fas fa-times-circle"></i>';
+                        // เฉลยข้อที่ถูก
+                        correctBtn.classList.add('correct');
+                        correctBtn.innerHTML += ' <i class="fas fa-check-circle"></i>';
+                    }
+                } else {
+                    // ไม่ได้ตอบ -> เฉลยข้อที่ถูก
+                    correctBtn.classList.add('correct');
+                }
+            });
+
+            // แสดงคะแนน
+            const scoreBoard = document.getElementById('scoreBoard');
+            const scoreCount = document.getElementById('scoreCount');
+            const scoreMessage = document.getElementById('scoreMessage');
+
+            scoreCount.innerText = score;
+            
+            if(score === 5) scoreMessage.innerText = "สุดยอด! คุณเก่งมาก";
+            else if(score >= 3) scoreMessage.innerText = "ทำได้ดีมากครับ";
+            else scoreMessage.innerText = "ลองทบทวนเนื้อหาอีกนิดนะครับ";
+
+            scoreBoard.style.display = 'block';
+            
+            // เลื่อนหน้าจอลงไปดูคะแนน
+            setTimeout(() => {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>

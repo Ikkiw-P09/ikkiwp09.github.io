@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เจาะลึกเรื่องกรดมะนาว (Citric Acid)</title>
+    <!-- เรียกใช้ฟอนต์ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- เรียกใช้ไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #84cc16; /* Lime Green */
+            --primary-dark: #4d7c0f;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-muted: #a3a3a3;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2e05 0%, #000000 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(132, 204, 22, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--primary-dark), transparent);
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border: 1px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .highlight-text {
+            background: rgba(132, 204, 22, 0.1);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Comparison Table */
+        .vs-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .vs-table th, .vs-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .vs-table th {
+            background-color: var(--primary-dark);
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .vs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Production Timeline-ish */
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        .step-list li::before {
+            content: '\f0c3'; /* Flask icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* CTA Button */
+        .cta-container {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+            border-radius: 20px;
+        }
+
+        .btn-quiz {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(132, 204, 22, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-quiz:hover {
+            background: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Citric Acid</h1>
+        <p>กรดมะนาว: ความเปรี้ยวอัจฉริยะจากธรรมชาติ สู่อุตสาหกรรมระดับโลก</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 1. ข้อมูลพื้นฐาน -->
+        <section>
+            <div class="section-title"><i class="fas fa-atom"></i> รู้จักกรดมะนาว</div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3><i class="fas fa-id-card"></i> ข้อมูลจำเพาะ</h3>
+                    <p><strong>สูตรเคมี:</strong> C₆H₈O₇</p>
+                    <p><strong>ชื่อเคมี:</strong> 2-hydroxy-1,2,3-propanetricarboxylic acid</p>
+                    <p><strong>ประเภท:</strong> กรดอินทรีย์อ่อน (Weak Organic Acid)</p>
+                    <p><strong>แหล่งธรรมชาติ:</strong> พืชตระกูลส้ม (Citrus)</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-vial"></i> โครงสร้างและสมบัติ</h3>
+                    <p>มีหมู่ฟังก์ชัน <span class="highlight-text">Carboxyl (-COOH) 3 หมู่</span> แสดงความเป็นกรด</p>
+                    <p><strong>ค่า pH:</strong> 2-3 (เปรี้ยวจี๊ด)</p>
+                    <p><strong>การละลาย:</strong> ละลายน้ำได้ดีมาก</p>
+                    <p><strong>ปฏิกิริยาเด่น:</strong> เจอเบส = ได้เกลือ+น้ำ / เจอหินปูน = เกิดฟองก๊าซ CO₂</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. การผลิต & ชีวภาพ (แก้ไขแล้ว) -->
+        <section>
+            <div class="section-title"><i class="fas fa-industry"></i> จากเชื้อรา...สู่โรงงาน</div>
+            
+            <!-- กล่องบน -->
+            <div class="card">
+                <h3><i class="fas fa-bacterium"></i> การผลิตระดับอุตสาหกรรม (Fermentation)</h3>
+                <p>กว่า 90% ของโลกใช้วิธีการหมัก ไม่ได้บีบจากมะนาวโดยตรง!</p>
+                <ul class="step-list">
+                    <li><strong>พระเอก:</strong> เชื้อรา <em>Aspergillus niger</em></li>
+                    <li><strong>วัตถุดิบ:</strong> แหล่งคาร์บอนราคาถูก เช่น กากน้ำตาล, แป้งข้าวโพด</li>
+                    <li><strong>กระบวนการ:</strong> เลี้ยงเชื้อราให้เปลี่ยนน้ำตาลเป็นกรดซิตริก -> ตกตะกอนด้วยน้ำปูนใส -> สกัดกรดบริสุทธิ์คืนมา</li>
+                </ul>
+            </div>
+
+            <!-- กล่องล่าง (แก้ให้เหมือนเพื่อนแล้ว) -->
+            <div class="card" style="margin-top: 20px;">
+                <h3><i class="fas fa-heartbeat"></i> ความสำคัญต่อร่างกาย (Krebs Cycle)</h3>
+                <p>กรดซิตริกเป็นสารตัวกลางสำคัญใน <strong>"วัฏจักรเครบส์"</strong> ที่เกิดขึ้นในไมโทคอนเดรีย ช่วยเปลี่ยนอาหาร (แป้ง ไขมัน โปรตีน) ให้เป็นพลังงาน (ATP) หากไม่มีกรดซิตริก เซลล์จะสร้างพลังงานเพื่อดำรงชีวิตไม่ได้</p>
+            </div>
+        </section>
+
+        <!-- 3. Comparison -->
+        <section>
+            <div class="section-title"><i class="fas fa-balance-scale"></i> อย่าสับสน! กรดมะนาว vs วิตามินซี</div>
+            <table class="vs-table">
+                <thead>
+                    <tr>
+                        <th>คุณสมบัติ</th>
+                        <th>กรดมะนาว (Citric Acid)</th>
+                        <th>วิตามินซี (Ascorbic Acid)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>หน้าที่หลัก</strong></td>
+                        <td>ให้รสเปรี้ยว, ถนอมอาหาร, ขจัดคราบ</td>
+                        <td>ต้านอนุมูลอิสระ, สร้างคอลลาเจน</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ความทนทาน</strong></td>
+                        <td><span style="color:var(--primary)">ทนความร้อนสูง</span> (ต้มแกงรสไม่เปลี่ยน)</td>
+                        <td><span style="color:#ef4444">สลายตัวง่าย</span> เมื่อโดนความร้อน/แสง</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 4. ประโยชน์ & DIY -->
+        <section>
+            <div class="section-title"><i class="fas fa-flask"></i> วิทยาศาสตร์ฉบับแม่บ้าน</div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3><i class="fas fa-shower"></i> ขจัดคราบตะกรัน</h3>
+                    <p>ตะกรันคือด่าง (แคลเซียมคาร์บอเนต) เมื่อเจอกรดซิตริก จะเกิดปฏิกิริยาเปลี่ยนตะกรันแข็งๆ ให้ละลายน้ำได้ และเกิดก๊าซ CO₂</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-soap"></i> ทำ Bath Bomb</h3>
+                    <p><strong>สูตรลับ:</strong> กรดซิตริก + เบกกิ้งโซดา (ผงแห้ง)</p>
+                    <p>เมื่อโยนลงน้ำ กรดกับเบสจะทำปฏิกิริยากันทันที เกิดก๊าซคาร์บอนไดออกไซด์พุ่งออกมาเป็นฟองฟู่</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-container">
+            <h2 style="color: white; margin-bottom: 20px;">พร้อมทดสอบความรู้หรือยัง?</h2>
+            <a href="forms.html" class="btn-quiz">เริ่มทำแบบทดสอบ <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+
+</body>
+</html>
