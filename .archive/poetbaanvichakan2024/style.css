@@ -207,28 +207,4 @@ button:active {
     #bingo-board {
       max-width: 95%; /* Slightly wider */
     }
-
-    button {
-        font-size: 4vw;
-    }
-
-    #win-popup h2 {
-        font-size: 6vw;
-    }
-
-    #win-popup button {
-        font-size: 4vw;
-    }
-
-    #close-rules {
-        font-size: 5vw;
-    }
-
-    #rules-overlay h2 {
-        font-size: 7vw;
-    }
-
-    #rules-overlay p {
-        font-size: 5vw;
-    }
 }

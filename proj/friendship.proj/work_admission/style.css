@@ -50,17 +50,3 @@ header {
 /*  เพิ่มสี  */
 .designer h2 { color: #ff69b4; }
 .scriptwriter h2 { color: #00bfff; }
-
-@media (max-width: 768px) {
-    .work_admission .home-content h1 {
-        font-size: 32px;
-    }
-
-    .work_admission div h2 {
-        font-size: 28px;
-    }
-
-    .work_admission li {
-        font-size: 16px;
-    }
-}

@@ -13,13 +13,3 @@
     display: flex;
     justify-content: center;
   }
-
-@media (max-width: 768px) {
-    .aboutme-content h3 {
-        font-size: 4rem;
-    }
-
-    .aboutme-content h4 {
-        font-size: 1.5rem;
-    }
-}

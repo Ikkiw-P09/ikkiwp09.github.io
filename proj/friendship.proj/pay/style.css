@@ -1,13 +1,3 @@
 h1 {
     
 }
-
-@media (max-width: 768px) {
-    .payment-methods {
-        flex-direction: column;
-    }
-
-    .payment-methods .btn {
-        margin-bottom: 1rem;
-    }
-}

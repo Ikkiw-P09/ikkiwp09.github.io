@@ -295,21 +295,6 @@ section#aboutproj .about p {
     line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-    section#aboutproj .about h1 {
-        font-size: 4rem;
-    }
-
-    section#aboutproj .about p {
-        font-size: 2rem;
-    }
-
-    section#members h1 {
-        font-size: 4rem;
-    }
-}
-
-
 
 /* Members section */
 section#members .members {

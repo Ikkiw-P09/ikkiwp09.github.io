@@ -6,9 +6,3 @@
 .proj-content h4{
     font-size: 2rem;
 }
-
-@media (max-width: 768px) {
-    .proj-content h3 {
-        font-size: 4rem;
-    }
-}
