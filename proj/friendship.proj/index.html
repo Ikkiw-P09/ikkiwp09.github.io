@@ -6,48 +6,63 @@
     <title>Home - Friendship.Proj</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Poppins and Kanit -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Discord icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="shortcut icon" href="/src/img/Google_AI_Studio_2025-08-02T16_20_35.258Z-modified (1).png" type="image/x-icon">
-    <!-- Custom Stylesheet -->
+    
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* ป้องกันปัญหา Glow บังปุ่มกดไม่ได้ หรือบังเนื้อหา */
+        .cursor-glow {
+            pointer-events: none !important;
+            z-index: 0 !important;
+        }
+        main {
+            position: relative;
+            z-index: 10;
+        }
+        body {
+            background-color: #030712; /* กันเหนียวถ้าสีพื้นหลังไม่มา */
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-white">
     <!-- Cursor glowing effect element -->
     <div id="cursor-glow" class="cursor-glow"></div>
 
-    <!-- Header/Navigation Bar with Liquid Glass effect -->
-    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300">
-        <nav class="p-2 md:p-4 flex flex-nowrap items-center justify-between bg-gray-900/50 backdrop-blur-xl rounded-full shadow-lg">
-            <a href="#" class="text-xl md:text-2xl font-bold text-white transition duration-300 hover:text-blue-400 px-2 md:px-6 whitespace-nowrap">Friendship.Proj</a>
-            <ul class="flex space-x-2 md:space-x-8 text-sm md:text-md font-medium px-2 md:px-6">
-                <li><a href="https://friendship.ikkiwp09.com" class="text-white transition duration-300 border-b-2 border-blue-500 pb-1 whitespace-nowrap">Home</a></li>
-                <li><a href="portal/" class="text-gray-400 transition duration-300 hover:text-blue-400 whitespace-nowrap">Portal</a></li>
-                <li><a href="/proj/friendship.proj/dl/" class="text-gray-400 transition duration-300 hover:text-blue-400 whitespace-nowrap">Download</a></li>
+    <!-- Header/Navigation Bar -->
+    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-full max-w-2xl px-4">
+        <nav class="p-2 md:p-4 flex items-center justify-between bg-gray-900/60 backdrop-blur-xl rounded-full shadow-2xl border border-white/10">
+            <a href="#" class="text-lg md:text-xl font-bold text-white transition duration-300 hover:text-blue-400 px-4 whitespace-nowrap">Friendship.Proj</a>
+            <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium px-4">
+                <li><a href="https://friendship.ikkiwp09.com" class="text-white transition duration-300 border-b-2 border-blue-500 pb-1">Home</a></li>
+                <li><a href="portal/" class="text-gray-400 transition duration-300 hover:text-blue-400">Portal</a></li>
+                <li><a href="/proj/friendship.proj/dl/" class="text-gray-400 transition duration-300 hover:text-blue-400">Download</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
-    <main class="py-24">
+    <main class="py-32 md:py-48">
         <div class="container mx-auto px-6 text-center">
             <!-- Project Title and Description -->
             <section class="mb-24">
-                <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-tight mb-8">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-tight mb-8 drop-shadow-2xl">
                     Friendship.Proj
                 </h1>
-                <p class="text-lg md:text-2xl text-gray-400 max-w-4xl mx-auto mb-10">
+                <p class="text-lg md:text-2xl text-gray-400 max-w-4xl mx-auto mb-10 font-light">
                     โปรเจคเซิร์ฟเวอร์ Minecraft แนวโรลเพลย์ในรั้วโรงเรียนเวทมนตร์
                 </p>
                 <p class="text-md md:text-lg text-gray-500 mb-12">
-                    Version : 1.20.1 (Java)
+                    Version : <span class="text-blue-400">1.20.1 (Java)</span>
                 </p>
                 <!-- Discord Join Button -->
-                <a href="https://discord.gg/QZXAZvSJds" class="inline-flex items-center justify-center space-x-3 px-8 py-4 bg-blue-600 rounded-full text-white font-bold text-lg md:text-xl shadow-lg transition duration-300 ease-in-out transform btn-discord">
+                <a href="https://discord.gg/QZXAZvSJds" class="inline-flex items-center justify-center space-x-3 px-10 py-4 bg-blue-600 rounded-full text-white font-bold text-lg md:text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95 btn-discord">
                     <i class="fab fa-discord text-2xl"></i>
                     <span>เข้าร่วมเซิร์ฟเวอร์</span>
                 </a>
@@ -58,19 +73,14 @@
                 <h2 class="text-5xl font-bold text-white mb-16 mt-24">
                     Developers
                 </h2>
-                <!-- ใช้ Div 2 ชุด สำหรับการจัดแถว (แถวบน 1 คน, แถวล่าง 3 คน) -->
-                <div id="row-1" class="flex flex-wrap justify-center gap-12 mb-12">
-                    <!-- การ์ด CEO จะถูกสร้างที่นี่โดย JavaScript -->
-                </div>
-                <div id="row-2" class="flex flex-wrap justify-center gap-12">
-                    <!-- การ์ดทีมงานที่เหลือจะถูกสร้างที่นี่โดย JavaScript -->
-                </div>
+                <div id="row-1" class="flex flex-wrap justify-center gap-12 mb-12"></div>
+                <div id="row-2" class="flex flex-wrap justify-center gap-12"></div>
             </section>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900/50 backdrop-blur-md text-center py-6 mt-16">
+    <footer class="bg-gray-900/30 backdrop-blur-md text-center py-8 mt-16 border-t border-white/5">
         <p class="text-gray-500 text-sm">© 2026 Friendship.Proj. All rights reserved.</p>
     </footer>
 
@@ -78,42 +88,37 @@
     <script>
         document.addEventListener('mousemove', (e) => {
             const cursor = document.getElementById('cursor-glow');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+            if(cursor) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            }
         });
     </script>
 
-    <!-- Script for API Sync (Always Show Data) -->
+    <!-- Script for API Sync -->
     <script>
-        // ==========================================
-        // ⚙️ CONFIGURATION
-        // ==========================================
         const API_URL = "https://discordapi.ikkiwp09.com/"; 
 
-        const TEAM_MEMBERS =[
+        const TEAM_MEMBERS = [
             {
-                // คนที่ 1 (แถวบน - CEO)
                 id: "913725262057857064", 
                 role: "CEO & Founder",
                 defaultName: "Ikkiw P09",
                 defaultImg: "/src/img/signal-2025-11-21-121500-modified.png"
             },
             {
-                // คนที่ 2 (แถวล่าง)
                 id: "696315604596162560", 
                 role: "Discord Manager & Co-Founder",
                 defaultName: "Phone",
                 defaultImg: "/src/img/400085980_737445994895034_5919873408852361743_n.jpg"
             },
             {
-                // คนที่ 3 (แถวล่าง)
                 id: "877968057119694858", 
                 role: "Server Manager & Co-Founder",
                 defaultName: "Kenny",
                 defaultImg: "/src/img/580053667_17969648723967754_3054815101093605987_n.jpg"
             },
             {
-                // คนที่ 4 (แถวล่าง)
                 id: "871579517200793671", 
                 role: "Server Manager",
                 defaultName: "Namsing",
@@ -121,94 +126,64 @@
             }
         ];
 
-        // ==========================================
-        // 🚀 LOGIC (Split Rows)
-        // ==========================================
-        async function fetchAndRender() {
-            const row1 = document.getElementById('row-1');
-            const row2 = document.getElementById('row-2');
-            let apiData =[];
-
-            try {
-                const response = await fetch(API_URL);
-                if (response.ok) {
-                    apiData = await response.json();
-                }
-            } catch (error) { 
-                console.error("API Connect Error:", error); 
-            }
-
-            // ถ้าไม่มีการ์ดอยู่ ให้สร้างการ์ดขึ้นมาใหม่
-            if (row1.children.length === 0 && row2.children.length === 0) {
-                TEAM_MEMBERS.forEach((m, index) => {
-                    const cardHTML = createCardHTML(m);
-                    
-                    // ปรับให้คนแรก (CEO) อยู่แถวบนคนเดียว ที่เหลืออยู่แถวล่าง
-                    if (index < 1) {
-                        row1.insertAdjacentHTML('beforeend', cardHTML);
-                    } else {
-                        row2.insertAdjacentHTML('beforeend', cardHTML);
-                    }
-                });
-            }
-
-            // อัปเดตข้อมูล
-            TEAM_MEMBERS.forEach(m => {
-                const liveData = apiData.find(d => String(d.id) === String(m.id));
-                updateCardData(m, liveData);
-            });
-        }
-
         function createCardHTML(config) {
             return `
-                <div id="card-${config.id}" class="dev-card-bg w-72 bg-gray-800 rounded-3xl p-6 flex flex-col items-center shadow-xl border border-gray-700 dev-card-animation">
+                <div id="card-${config.id}" class="dev-card-bg w-72 bg-gray-800/50 rounded-3xl p-6 flex flex-col items-center shadow-xl border border-white/5 backdrop-blur-sm transition-all duration-500 hover:border-blue-500/50">
                     <div class="relative mb-4">
                         <img id="img-${config.id}" 
                              src="${config.defaultImg}" 
-                             class="w-48 h-48 rounded-full border-4 border-gray-600 object-cover bg-gray-700 transition-colors duration-300">
+                             class="w-44 h-44 rounded-full border-4 border-gray-700 object-cover bg-gray-800 transition-all duration-300">
                     </div>
-                    
                     <h3 id="name-${config.id}" class="text-2xl font-bold text-white mb-1 truncate w-full text-center">
                         ${config.defaultName}
                     </h3>
-                    
-                    <p id="handle-${config.id}" class="text-sm text-gray-400 mb-3 h-5 min-h-[1.25rem]">
-                        <!-- รอโหลด... -->
-                    </p>
-                    
-                    <div class="w-full h-[1px] bg-gray-700 mb-3"></div>
-                    
-                    <p class="text-lg text-blue-400 font-semibold text-center h-12 flex items-center justify-center leading-tight">
+                    <p id="handle-${config.id}" class="text-sm text-gray-500 mb-3 h-5">@loading...</p>
+                    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-3"></div>
+                    <p class="text-blue-400 font-medium text-center leading-tight">
                         ${config.role}
                     </p>
                 </div>
             `;
         }
 
-        function updateCardData(config, data) {
-            const imgEl = document.getElementById(`img-${config.id}`);
-            const nameEl = document.getElementById(`name-${config.id}`);
-            const handleEl = document.getElementById(`handle-${config.id}`);
+        async function fetchAndRender() {
+            const row1 = document.getElementById('row-1');
+            const row2 = document.getElementById('row-2');
+            if(!row1 || !row2) return;
 
-            if (!imgEl) return;
+            // สร้างการ์ดครั้งแรก (ถ้ายังไม่มี)
+            if (row1.children.length === 0) {
+                TEAM_MEMBERS.forEach((m, index) => {
+                    const html = createCardHTML(m);
+                    if (index < 1) row1.insertAdjacentHTML('beforeend', html);
+                    else row2.insertAdjacentHTML('beforeend', html);
+                });
+            }
 
-            if (data) {
-                if (data.handle) handleEl.textContent = `@${data.handle}`;
-                if (data.username) nameEl.textContent = data.username;
-                // ถ้า API มี Avatar ให้ใช้ แต่ถ้าไม่มีก็ใช้ Default ที่ตั้งไว้ใน config
-                if (data.avatar) imgEl.src = data.avatar; 
-                else imgEl.src = config.defaultImg;
-            } else {
-                // ถ้าเรียก API ไม่ได้ ให้กลับไปใช้ค่า Default
-                nameEl.textContent = config.defaultName;
-                handleEl.textContent = '';
-                imgEl.src = config.defaultImg;
+            try {
+                const response = await fetch(API_URL);
+                if (response.ok) {
+                    const apiData = await response.json();
+                    TEAM_MEMBERS.forEach(m => {
+                        const live = apiData.find(d => String(d.id) === String(m.id));
+                        if(live) {
+                            if(live.avatar) document.getElementById(`img-${m.id}`).src = live.avatar;
+                            if(live.username) document.getElementById(`name-${m.id}`).textContent = live.username;
+                            if(live.handle) document.getElementById(`handle-${m.id}`).textContent = `@${live.handle}`;
+                        }
+                    });
+                }
+            } catch (err) {
+                console.warn("API Offline, using defaults.");
+                TEAM_MEMBERS.forEach(m => {
+                    document.getElementById(`handle-${m.id}`).textContent = "";
+                });
             }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             fetchAndRender();
-            setInterval(fetchAndRender, 5000);
+            setInterval(fetchAndRender, 10000); // เช็คทุก 10 วิพอ ไม่ต้องถี่มาก
         });
     </script>
 </body>
