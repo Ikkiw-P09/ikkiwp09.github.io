@@ -161,7 +161,7 @@
             if (row1.children.length === 0) {
                 TEAM_MEMBERS.forEach((m, index) => {
                     const html = createCardHTML(m);
-                    if (index < 1) row1.insertAdjacentHTML('beforeend', html);
+                    if (index < 2) row1.insertAdjacentHTML('beforeend', html);
                     else row2.insertAdjacentHTML('beforeend', html);
                 });
             }
